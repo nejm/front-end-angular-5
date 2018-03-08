@@ -1,0 +1,29 @@
+<div class="main-content">
+  <div class="col-md-3" *ngFor="let item of stats; let x = index">
+    {{id}}
+    <div class="card">
+      <div class="header">
+        <h4 class="title">{{item.name}}</h4>
+      </div>
+      <hr>
+      <div class="content">
+        <div style="min-height:150px; max-height : 150px; height:150px">
+            {{item.description}}
+        </div>
+        <div class="footer">
+
+          <hr>
+          <div class="stats" style="width:100%">
+            <div class="col-md-12">
+              <i class="fa fa-clock-o"></i> {{item.creationDate | date}}
+              <a [routerLink]="['edit/' + item.id]" class="btn btn-default btn-sm pull-right">
+                <i class="fa fa-search"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
